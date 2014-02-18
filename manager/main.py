@@ -138,6 +138,7 @@ def run():
             LOGGER.exception('failed to start comp_shortcut')
             comp_shortcut.stop()
     fqsocks.fqsocks.DNS_HANDLER.set_dns_bypass(fqsocks.config_file.read_config()['dns']['bypass'])
+    fqsocks.fqsocks.get_default_dns_server = config.get_default_dns_server
     fqsocks.fqsocks.main()
 
 
